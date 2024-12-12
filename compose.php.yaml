@@ -28,7 +28,7 @@ services:
   web:
     image: nginx:stable
     volumes:
-      - ./configs/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./configs/nginx/symfony.nginx.conf:/etc/nginx/conf.d/default.conf
     ports:
       - "9580:80"
     depends_on:

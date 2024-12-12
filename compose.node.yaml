@@ -14,7 +14,7 @@ services:
   web:
     image: nginx:alpine
     volumes:
-      - ./configs/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./configs/nginx/express.nginx.conf:/etc/nginx/conf.d/default.conf
     ports:
       - "9580:80"
     depends_on:
