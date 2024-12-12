@@ -10,20 +10,6 @@ services:
       dockerfile: configs/php-fpm/Dockerfile
     volumes:
       - ./symfony:/var/www/symfony
-    environment:
-      - APP_ENV=dev
-      - APP_SECRET=your_secret_key
-      - DATABASE_URL=mysql://root:password@db:3306/symfony
-    depends_on:
-      - db
-
-  db:
-    image: mysql:8.0
-    environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: symfony
-    volumes:
-      - db_data:/var/lib/mysql
 
   web:
     image: nginx:stable

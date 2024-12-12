@@ -18,5 +18,5 @@ services:
     ports:
       - "9580:80"
     depends_on:
-      - vite
-      - express
+      - frontend
+      - backend

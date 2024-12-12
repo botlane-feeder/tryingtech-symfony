@@ -30,4 +30,7 @@ WORKDIR /var/www/symfony
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Install PHP dependencies - FOR PROD
+# Ajouter un .dockerignore, avec vendor/ puis faire un composer install
+# RUN composer install
 # RUN composer install --optimize-autoloader --no-dev
+
